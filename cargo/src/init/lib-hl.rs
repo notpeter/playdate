@@ -8,12 +8,12 @@ extern crate playdate as pd;
 use core::ptr::NonNull;
 use pd::sys::EventLoopCtrl;
 use pd::sys::ffi::PlaydateAPI;
-// use pd::system::update::UpdateCtrl;
+use pd::system::update::UpdateCtrl;
 use pd::display::Display;
 use pd::graphics::*;
 // use pd::graphics::text::*;
 use pd::graphics::bitmap::*;
-// use pd::system::prelude::*;
+use pd::system::prelude::*;
 // use pd::sound::prelude::*;
 // use pd::fs::Path;
 
