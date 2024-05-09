@@ -17,12 +17,12 @@ launch-sound-path = "sfx/jump"
 
 # Assets Rules
 # doc: https://github.com/boozook/playdate/blob/main/support/build/README.md#assets
-[package.metadata.playdate.assets]
-"img/system/" = "${{PLAYDATE_SDK_PATH}}/Examples/Game Template/Source/SystemAssets/*.png"
-"sfx/jump.wav" = "${{PLAYDATE_SDK_PATH}}/Examples/Level 1-1/Source/sfx/jump.wav"
 # This is a complex way of specifying what assets should be included.
 # Left hand is a path where asset should be in the package,
 # Right hand is the path where source(s) should be found.
+#[package.metadata.playdate.assets]
+# "img/system/" = "${{PLAYDATE_SDK_PATH}}/Examples/Game Template/Source/SystemAssets/*.png"
+# "sfx/jump.wav" = "${{PLAYDATE_SDK_PATH}}/Examples/Level 1-1/Source/sfx/jump.wav"
 
 # Also this way supports simple include and exclude instructions:
 # "rel-to-crate-root/file-to-include" = true   # left hand is a local path, relative to crate-root,
