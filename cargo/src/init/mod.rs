@@ -80,6 +80,10 @@ pub fn new_or_init<'cfg>(config: &'cfg Config<'cfg>) -> CargoResult<()> {
 	let manifest = manifest.to_string();
 	std::fs::write(manifest_path, manifest.trim_start())?;
 
+	// rust-toolchain.toml
+	let toolchain_path = path.join("rust-toolchain.toml");
+	let toolchain_toml = "[toolchain]\nchannel = \"nightly\"\n";
+	std::fs::write(toolchain_path, toolchain_toml);
 
 	// cargo config:
 	cargo_config(config, path.join(".cargo").join("config.toml"))?;
