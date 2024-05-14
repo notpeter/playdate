@@ -107,10 +107,10 @@ impl Generator {
 
 
 fn create_generator(cfg: cfg::Cfg) -> Result<Generator, error::Error> {
-	println!("cargo:rerun-if-env-changed=TARGET");
+	// println!("cargo:rerun-if-env-changed=TARGET");
 	let cargo_target_triple = env::var("TARGET").expect("TARGET cargo env var");
 
-	println!("cargo:rerun-if-env-changed=PROFILE");
+	// println!("cargo:rerun-if-env-changed=PROFILE");
 	let cargo_profile = env::var("PROFILE").expect("PROFILE cargo env var");
 	let is_debug = cargo_profile == "debug" || env_cargo_feature("DEBUG");
 
